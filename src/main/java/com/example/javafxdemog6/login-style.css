@@ -1,0 +1,131 @@
+/* JavaFX CSS - Dark Theme with Azure Undertones */
+
+/* Root styles and variable definitions */
+.root {
+    -fx-background-color: #1a1a2e;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: #e6e6e6;
+
+    /* Color palette variables */
+    -azure-dark: #0a1929;
+    -azure-mid: #1976d2;
+    -azure-light: #63a4ff;
+    -azure-accent: #00b0ff;
+    -text-light: #e6e6e6;
+    -text-dark: #121212;
+}
+
+/* GridPane styling - using the default GridPane class since you're creating a standard GridPane */
+.grid-pane, GridPane {
+    -fx-padding: 20;
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+    -fx-background-color: #1a1a2e;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 150, 255, 0.3), 10, 0, 0, 0);
+}
+
+/* Label styling for all labels including userLabel, passLabel, and messageLabel */
+.label {
+    -fx-text-fill: #e6e6e6;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+/* Specific styling for the messageLabel based on the text content */
+.label:contains("successfully") {
+    -fx-text-fill: #69f0ae;
+}
+
+.label:contains("Wrong") {
+    -fx-text-fill: #ff5252;
+}
+
+.label:contains("couldn't") {
+    -fx-text-fill: #ff5252;
+}
+
+/* TextField styling for usernameField */
+.text-field {
+    -fx-background-color: #0a1929;
+    -fx-text-fill: #e6e6e6;
+    -fx-font-size: 13px;
+    -fx-padding: 8;
+    -fx-border-color: #2a3c58;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.text-field:focused {
+    -fx-border-color: #1976d2;
+    -fx-effect: dropshadow(three-pass-box, #63a4ff, 5, 0, 0, 0);
+}
+
+/* PasswordField styling for passwordField */
+.password-field {
+    -fx-background-color: #0a1929;
+    -fx-text-fill: #e6e6e6;
+    -fx-font-size: 13px;
+    -fx-padding: 8;
+    -fx-border-color: #2a3c58;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.password-field:focused {
+    -fx-border-color: #1976d2;
+    -fx-effect: dropshadow(three-pass-box, #63a4ff, 5, 0, 0, 0);
+}
+
+/* Default Button styling for both loginButton and registerButton */
+.button {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: #e6e6e6;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #63a4ff;
+}
+
+.button:pressed {
+    -fx-background-color: #0a1929;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 2, 0, 0, 0);
+    -fx-translate-y: 1;
+}
+
+/* Scene styling */
+.scene {
+    -fx-background-color: #1a1a2e;
+}
+
+/* Stage styling */
+.stage {
+    -fx-background-color: #1a1a2e;
+}
+
+/* Different styling for login vs register buttons */
+.button:nth-child(1) {
+    -fx-background-color: #1976d2;
+}
+
+.button:nth-child(2) {
+    -fx-background-color: transparent;
+    -fx-border-color: #1976d2;
+    -fx-border-width: 1;
+    -fx-text-fill: #63a4ff;
+}
+
+.button:nth-child(2):hover {
+    -fx-background-color: rgba(25, 118, 210, 0.2);
+    -fx-border-color: #63a4ff;
+}
